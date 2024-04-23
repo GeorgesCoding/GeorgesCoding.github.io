@@ -535,11 +535,11 @@ textarea {
     position: relative;
 }
 
-
-
-
-
-
+.g-recaptcha {
+    margin-left: 50px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
 
 
 
