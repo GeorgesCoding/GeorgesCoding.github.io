@@ -512,7 +512,7 @@ textarea {
     padding-left: 5px;
 }
 
-.formButtons {
+.form button {
     background-color: rgb(62, 105, 121);
     transition: all 0.3s ease-in-out;
     font-size: 40px;
@@ -528,7 +528,7 @@ textarea {
     margin-left: 50px;
 }
 
-.formButtons:hover {
+.form button:hover {
     transform: translateY(2px);
     box-shadow: none;
     position: relative;

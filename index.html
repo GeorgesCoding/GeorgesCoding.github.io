@@ -20,7 +20,7 @@
     </script>
     <script>
         function onSubmit(token) {
-            document.getElementById("demo-form").submit();
+            document.getElementById("form").submit();
         }
     </script>
     <link rel="icon" type="image/x-icon" href="Assets/Icon.ico">
@@ -204,8 +204,8 @@
                 <label for="message">Message:</label>
                 <textarea name="message" placeholder="Your Message" rows="5" aria-required="true"></textarea>
             </form>
-            <button onclick="valid()" class="formButtons">Send</button>
-            <button type="reset" form="form" class="formButtons">Clear</button>
+            <button class="g-recaptcha" data-sitekey="reCAPTCHA_site_key" data-callback='onSubmit' data-action='submit' onclick="valid()">Send</button>
+            <button type="reset" form="form">Clear</button>
         </div>
 
         <!--  <div class="socials">
