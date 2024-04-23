@@ -1,5 +1,4 @@
-/* Creates a typewriter effect by adding text one character at a time
-    skips over spaces for a smoother animation */
+/* Creates a typewriter effect by adding text one character at a time, skips over spaces for a smoother animation */
 var text = "  Hi, I'm George";
 i = 0;
 function typeWriter() {
@@ -25,17 +24,29 @@ function send(name, email, message) {
         to_name: 'George',
         from_name: name,
         subject: 'Contact Form Message',
-        message: email + message,
+        message: "Email: " + email + "\n\n" + message,
     };
-    emailjs.send('service_j2mkwmy', 'template_zilck42', templateParams, 'OmkW-QBfWdiQpxshy');
+    emailjs.send('service_j2mkwmy', 'template_zilck42', templateParams, 'OmkW-QBfWdiQpxshy').then(
+        (response) => {
+            alert("Message successfully sent!");
+        },
+        (error) => {
+            alert("There was an error in sending the message. Please contact support@georgescoding.com.");
+        },
+    );
 }
 
 
 /* Validates the contents of the form */
 function valid() {
-    var name = document.querySelector('[name="name"]').value;
-    var email = document.querySelector('[name="email"]').value;
-    var message = document.querySelector('[name="message"]').value;
+    var name = String(document.querySelector('[name="name"]').value);
+    var email = String(document.querySelector('[name="email"]').value);
+    var message = String(document.querySelector('[name="message"]').value);
+    var format = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/;
 
-    send(name, email, message);
+    if (name == "") { alert("Name must be filled") }
+    else if (email == "") { alert("Email must be filled") }
+    else if (message == "") { alert("You must include a message") }
+    else if (!(String(email).match(format))) { alert("Email is incorrect") }
+    else { send(name, email, message); }
 }

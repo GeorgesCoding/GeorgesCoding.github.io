@@ -9,14 +9,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://kit.fontawesome.com/6eb7aace7e.js" crossorigin="anonymous"></script>
     <script src="functions.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script type="text/javascript">
         (function () {
             emailjs.init({
                 publicKey: "OmkW-QBfWdiQpxshy",
             });
         })();
+    </script>
+    <script>
+        function onSubmit(token) {
+            document.getElementById("demo-form").submit();
+        }
     </script>
     <link rel="icon" type="image/x-icon" href="Assets/Icon.ico">
     <link rel="stylesheet" href="style.css">
@@ -199,14 +204,17 @@
                 <label for="message">Message:</label>
                 <textarea name="message" placeholder="Your Message" rows="5" aria-required="true"></textarea>
             </form>
-            <button onclick="valid()" class="formButtons">Send</button> <button type="reset" form="form" class="formButtons">Clear</button>
+            <button onclick="valid()" class="formButtons">Send</button>
+            <button type="reset" form="form" class="formButtons">Clear</button>
         </div>
 
         <!--  <div class="socials">
             <h4>Say Hi!</h4>
-            <p class="socials">GitHub: <a href="https://github.com/GeorgesCoding" target="_blank" class="fa fa-github"></a><br>
-                Email: <a href="mailto:chen.george148@gmail.com" class="fa fa-envelope"></a><br>
-                LinkedIn:<a href="https://www.linkedin.com/in/george-chen-uw2028/" target="_blank" class="fa fa-linkedin"></a>
+            <p class="socials">
+                GitHub: <a href="https://github.com/GeorgesCoding" target="_blank" class="fa fa-github"></a><br>
+                Email: <a href="mailto:george@georgescoding.com" class="fa fa-envelope"></a><br>
+                LinkedIn: <a href="https://www.linkedin.com/in/george~chen" target="_blank" class="fa fa-linkedin"></a><br>
+                LeetCode: <a href="https://leetcode.com/GeorgesCoding/" target="_blank" class="fa fa-linkedin"></a>
             </p>
         </div> -->
 
