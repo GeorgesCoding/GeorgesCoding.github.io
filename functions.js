@@ -50,3 +50,8 @@ function valid() {
     else if (!(String(email).match(format))) { alert("Email is incorrect") }
     else { send(name, email, message); }
 }
+
+function confirm() {
+    alert("hi");
+    grecaptcha.execute();
+}
