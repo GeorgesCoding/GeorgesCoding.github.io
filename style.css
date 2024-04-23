@@ -485,7 +485,8 @@ textarea {
     vertical-align: middle;
 }
 
-input[type=text],
+input[type=email],
+input[type=name],
 textarea {
     text-decoration: none;
     width: 90%;

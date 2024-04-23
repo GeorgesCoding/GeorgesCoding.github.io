@@ -9,6 +9,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://kit.fontawesome.com/6eb7aace7e.js" crossorigin="anonymous"></script>
     <script src="functions.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "OmkW-QBfWdiQpxshy",
+            });
+        })();
+    </script>
     <link rel="icon" type="image/x-icon" href="Assets/Icon.ico">
     <link rel="stylesheet" href="style.css">
     <title>George's Portfolio Website</title>
@@ -29,7 +38,7 @@
                 <a href="projects/breathalyzer/index.html">3. Breathalyzer</a>
                 <a href="projects/blackjack/index.html">4. Blackjack</a>
                 <a href="projects/ph-sensor/index.html">5. pH-Sensor</a>
-                <a href="projects/geesespotter/index.html">6. GeeseSpotter</a>
+                <a href="projects/minesweeper/index.html">6. Minesweeper</a>
                 <a id="see-all" href="projects/index.html">See All</a>
             </div>
         </div>
@@ -182,15 +191,15 @@
             <h4>Leave a Message</h4>
             <form id="form">
                 <label for="name">Name:</label>
-                <input type="text" name="name" placeholder="Your Name" autocomplete="on" aria-required="true"><br>
+                <input type="name" name="name" placeholder="Your Name" autocomplete="on" aria-required="true"><br>
 
-                <label for="name">Email:</label>
-                <input type="text" name="email" placeholder="Your Email" autocomplete="on" aria-required="true"><br>
+                <label for="email">Email:</label>
+                <input type="email" name="email" placeholder="Your Email" autocomplete="on" aria-required="true"><br>
 
-                <label for="name">Message:</label>
+                <label for="message">Message:</label>
                 <textarea name="message" placeholder="Your Message" rows="5" aria-required="true"></textarea>
             </form>
-            <button onclick="send()" class="formButtons">Send</button> <button type="reset" form="form" class="formButtons">Clear</button>
+            <button onclick="valid()" class="formButtons">Send</button> <button type="reset" form="form" class="formButtons">Clear</button>
         </div>
 
         <!--  <div class="socials">
@@ -207,7 +216,9 @@
 
 <!--Copyright-->
 <div class="copyright">
-    <p>Copyright © 2024 George Chen</p>
+    <p>Copyright ©
+        <script>document.write(new Date().getFullYear());</script> George Chen
+    </p>
 </div>
 
 </html>
