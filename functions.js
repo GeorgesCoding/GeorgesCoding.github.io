@@ -20,11 +20,13 @@ function flip(x) {
 
 /* Gets the information inputted from the form and sends it using mail.js */
 function send(name, email, message) {
+    let captchaToken = grecaptcha.getResponse();
     var templateParams = {
         to_name: 'George',
         from_name: name,
         subject: 'Contact Form Message',
         message: "Email: " + email + "\n\n" + message,
+        "g-recaptcha-response": captchaToken,
     };
     emailjs.send('service_j2mkwmy', 'template_zilck42', templateParams, 'OmkW-QBfWdiQpxshy').then(
         (response) => {
