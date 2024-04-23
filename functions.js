@@ -43,11 +43,6 @@ function valid() {
     var email = String(document.querySelector('[name="email"]').value);
     var message = String(document.querySelector('[name="message"]').value);
     var format = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/;
-    var button = document.getElementById("send");
-
-    button.classList.toggle("g-recaptcha");
-
-    console.log(button);
 
     if (name == "") { alert("Name must be filled") }
     else if (email == "") { alert("Email must be filled") }
