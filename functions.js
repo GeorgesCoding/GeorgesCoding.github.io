@@ -21,8 +21,8 @@ function flip(x) {
 /* Gets the information inputted from the form and sends it using mail.js */
 function send(name, email, message) {
     var captchaToken = grecaptcha.getResponse();
-    
-    if (captchaToken == "") {
+
+    if (captchaToken == "" || captchaToken == " ") {
         alert("Please complete the reCAPTCHA before sending your message!")
     }
     else {
