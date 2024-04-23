@@ -1,16 +1,227 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- When deploying to domain, change the directories for the main and subpage in index.html -->
+
 
 <head>
-    <title>reCAPTCHA demo: Simple page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/6eb7aace7e.js" crossorigin="anonymous"></script>
+    <script src="functions.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "OmkW-QBfWdiQpxshy",
+            });
+        })();
+    </script>
+    <link rel="icon" type="image/x-icon" href="Assets/Icon.ico">
+    <link rel="stylesheet" href="style.css">
+    <title>George's Portfolio Website</title>
 </head>
+<a id="top"></a>
 
-<body>
-    <form action="?" method="POST">
-        <div class="g-recaptcha" data-sitekey="6LfUxMQpAAAAANxEA_tNe3RvqT_d0iclalzDqmz8"></div>
-        <br />
-        <input type="submit" value="Submit">
-    </form>
-</body>
+
+<!--Navigation Bar-->
+<div id="navbar">
+    <a class="logo" href="#top"> <img src=Assets/Icon.ico>GeorgesCoding</a>
+    <div class="right-header">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <div class="dropdown"> <a href="#projects">Projects</a>
+            <div class="content">
+                <a href="projects/chess/index.html">1. Chess App</a>
+                <a href="projects/portfolio-website/index.html">2. Portfolio Website</a>
+                <a href="projects/breathalyzer/index.html">3. Breathalyzer</a>
+                <a href="projects/blackjack/index.html">4. Blackjack</a>
+                <a href="projects/ph-sensor/index.html">5. pH-Sensor</a>
+                <a href="projects/minesweeper/index.html">6. Minesweeper</a>
+                <a id="see-all" href="projects/index.html">See All</a>
+            </div>
+        </div>
+        <a href="#contact">Contact</a>
+    </div>
+</div>
+
+
+<body onload="typeWriter()"></body>
+
+<!--Introduction-->
+<div class="header">
+    <h1 id="typing"></h1>
+    <h2>University of Waterloo | Electrical Engineering</h2>
+    <div class="button"> <a href="#about"><button class="readmore">Read More</button></a>
+        <a href="#contact"><button class="contactbutton">Contact</button></a>
+    </div>
+</div>
+<a id="about"></a>
+
+
+<!--Overview-->
+<div id="overview">
+    <h3>About Me</h3>
+    <div class="box">
+        <p>Hey there! I’m George Chen, an Electrical Engineering student at the University of Waterloo with a
+            passion for software development, microcontrollers and their applications within artificial
+            intelligence. Some values I stand behind are helping the less fortunate and improving the
+            livelihood of everyday people, something I wish to accomplish by learning these technologies.
+            During the winter term, I utilized my time to develop meaningful projects to deepen my knowledge
+            in web development and introduce myself to artificial intelligence with game theory and game
+            development. Some personal interests that are non-technology related are dragon & lion dance,
+            playing piano, mechanical keyboards and camping, most of which I've been doing for over 10 years.
+        </p>
+        <div id="profile-image"> <img src='Assets/Profile Picture.png'></div>
+    </div>
+</div>
+<a id="work"></a>
+
+
+<!-- Work -->
+<div class="experience">
+    <h3>Work Experience</h3>
+    <h4> Plan Group - Electrical Designer</h4>
+    <h5> Date: Jan 2023 - Apr 2023</h5>
+    <p>My time at Plan Group began with Project ALICE, an initiative to help improve the productivity of CAD design
+        by developing custom tools for designers. I developed 5 different optimization tools in C# for Revit
+        design. Subsequently, I transitioned to help with quality inspection control for electrical floor plan
+        layouts in Revit for Sick Kids Hospital. In total, I examined over 40 layouts across two buildings, aiding
+        in a 70% reduction in completion time per layout. Lastly, I designed plumbing and electrical fixtures in
+        Revit for TD Bank electrical floor plan layouts and helped fix faulty conduit placements.
+    </p>
+    <div class="plangroup">
+        <img id="ALICE" src='Assets/ALICE.png'>
+        <img id="selfie" src='Assets/Selfie.jpg'>
+    </div>
+</div>
+
+
+<!-- Programming Languages/Tools/Software -->
+<div class="tools">
+    <h3>Programming Languages: Python, C++, Java, C#, JavaScript, HTML, CSS</h3>
+    <h3>Tools and Software: GIT, Arduino, STM32, Revit, AutoCAD</h3>
+</div>
+
+
+<!-- Projects -->
+<a id="projects"></a>
+<div class="projects">
+    <h3>Projects</h3>
+    <div class="grid">
+
+        <div class="card" onclick="flip(this)" id="1">
+            <div class="front"><img src='Assets/chess.png'>Chess App</div>
+            <div class="back">A traditional game of chess with an AI engine using a minimax algorithm with alpha-beta pruning.
+                Developed with the PyGame module and packaged into an executable for accessibility.
+                <div class="info"><a href="https://github.com/GeorgesCoding/Chess" target="_blank" class="fa fa-github"></a>
+                    <a href="projects/chess/index.html"><button class="learnMore">Learn More</button></a>
+                    <br>Python
+                </div>
+            </div>
+        </div>
+
+        <div class="card" onclick="flip(this)" id="2">
+            <div class="front"><img src='Assets/portfolio.png'>Portfolio Website</div>
+            <div class="back">Custom-built portfolio website to showcase engineering and software development projects and work experience.
+                Animations programmed with pure JS and CSS.
+                <div class="info"><a href="https://github.com/GeorgesCoding/Portfolio" target="_blank" class="fa fa-github"></a>
+                    <a href="projects/portfolio-website/index.html"><button class="learnMore">Learn More</button></a>
+                    <br>HTML, CSS, JavaScript
+                </div>
+            </div>
+        </div>
+
+        <div class="card" onclick="flip(this)" id="3">
+            <div class="front"><img src='Assets/breathalyzer.jpg'>Breathalyzer</div>
+            <div class="back">An alcohol detection device capable of reading an approximate %BAC in the surrounding air.
+                Created using an STM32 board and MQ3 alcohol sensor, programmed with the ArduinoIDE.
+                <div class="info"><a href="https://github.com/GeorgesCoding/Breathalyzer" target="_blank" class="fa fa-github"></a>
+                    <a href="projects/breathalyzer/index.html"><button class="learnMore">Learn More</button></a>
+                    <br>C/C++, Arduino, STM32, AutoCAD
+                </div>
+            </div>
+        </div>
+
+        <div class="card" onclick="flip(this)" id="4">
+            <div class="front"><img src='Assets/blackjack.png'>Blackjack</div>
+            <div class="back">Casino-style blackjack game built using Java and Java Swing.
+                Includes a computer that will determine moves based on classic casino rules.
+                <div class="info"><a href="https://github.com/GeorgesCoding/Blackjack" target="_blank" class="fa fa-github"></a>
+                    <a href="projects/blackjack/index.html"><button class="learnMore">Learn More</button></a>
+                    <br>Java
+                </div>
+            </div>
+        </div>
+
+        <div class="card" onclick="flip(this)" id="5">
+            <div class="front"><img src='Assets/ph-sensor.jpg'>pH-Sensor</div>
+            <div class="back">A sensory tool capable of determining the approximate pH of any liquid.
+                Built an STM32 board and an analog electrode pH sensor compatible with Arduino.
+                <div class="info"><a href="https://github.com/GeorgesCoding/pH-Sensor" target="_blank" class="fa fa-github"></a>
+                    <a href="projects/ph-sensor/index.html"><button class="learnMore">Learn More</button></a>
+                    <br>C/C++, Arduino, STM32, AutoCAD
+                </div>
+            </div>
+        </div>
+
+        <div class="card" onclick="flip(this)" id="6">
+            <div class="front"><img src='Assets/minesweeper.png'>Minesweeper</div>
+            <div class="back">Command terminal adaptation of the retro game Minesweeper.
+                <div class="info">
+                    <a href="https://github.com/GeorgesCoding/Minesweeper" target="_blank" class="fa fa-github"></a>
+                    <a href="projects/minesweeper/index.html"><button class="learnMore">Learn More</button></a>
+                    <br>C++
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="projects/index.html"><button class="seeMore">See All</button></a>
+</div>
+
+
+<!-- Contact/Socials-->
+<a id="contact"></a>
+<div class="contact">
+    <h3>Contact</h3>
+    <div class="grid">
+
+        <div class="form">
+            <h4>Leave a Message</h4>
+            <form id="form">
+                <label for="name">Name:</label>
+                <input type="name" name="name" placeholder="Your Name" autocomplete="on" aria-required="true"><br>
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" placeholder="Your Email" autocomplete="on" aria-required="true"><br>
+
+                <label for="message">Message:</label>
+                <textarea name="message" placeholder="Your Message" rows="5" aria-required="true"></textarea>
+            </form>
+            <button id="send" onclick="valid()" data-sitekey="6LfUxMQpAAAAANxEA_tNe3RvqT_d0iclalzDqmz8">Send</button>
+            <button type="reset" form="form">Clear</button>
+        </div>
+
+        <!--  <div class="socials">
+            <h4>Say Hi!</h4>
+            <p class="socials">
+                GitHub: <a href="https://github.com/GeorgesCoding" target="_blank" class="fa fa-github"></a><br>
+                Email: <a href="mailto:george@georgescoding.com" class="fa fa-envelope"></a><br>
+                LinkedIn: <a href="https://www.linkedin.com/in/george~chen" target="_blank" class="fa fa-linkedin"></a><br>
+                LeetCode: <a href="https://leetcode.com/GeorgesCoding/" target="_blank" class="fa fa-linkedin"></a>
+            </p>
+        </div> -->
+
+    </div>
+</div>
+
+
+<!--Copyright-->
+<div class="copyright">
+    <p>Copyright ©
+        <script>document.write(new Date().getFullYear());</script> George Chen
+    </p>
+</div>
 
 </html>
