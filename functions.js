@@ -22,7 +22,7 @@ function flip(x) {
 function send(name, email, message) {
     var captchaToken = grecaptcha.getResponse();
     
-    if (captchaToken == null) {
+    if (captchaToken == "") {
         alert("Please complete the reCAPTCHA before sending your message!")
     }
     else {
