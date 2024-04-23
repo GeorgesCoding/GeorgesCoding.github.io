@@ -41,6 +41,8 @@ function send(name, email, message) {
                 alert("There was an error in sending the message. Please contact support@georgescoding.com.");
             },
         );
+        document.getElementById("form").reset();
+        grecaptcha.reset();
     }
 }
 
@@ -52,9 +54,21 @@ function valid() {
     var message = String(document.querySelector('[name="message"]').value);
     var format = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/;
 
-    if (name == "") { alert("Name must be filled") }
-    else if (email == "") { alert("Email must be filled") }
-    else if (message == "") { alert("You must include a message") }
-    else if (!(String(email).match(format))) { alert("Email is incorrect") }
+    if (name == "") {
+        alert("Name must be filled");
+        document.getElementById("name").focus();
+    }
+    else if (email == "") {
+        alert("Email must be filled");
+        document.getElementById("email").focus();
+    }
+    else if (message == "") {
+        alert("You must include a message");
+        document.getElementById("message").focus();
+    }
+    else if (!(String(email).match(format))) {
+        alert("Email is incorrect");
+        document.getElementById("email").focus();
+    }
     else { send(name, email, message); }
 }
