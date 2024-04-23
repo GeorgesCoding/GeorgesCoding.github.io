@@ -21,23 +21,27 @@ function flip(x) {
 /* Gets the information inputted from the form and sends it using mail.js */
 function send(name, email, message) {
     var captchaToken = grecaptcha.getResponse();
-    alert(captchaToken);
-
-    var templateParams = {
-        to_name: 'George',
-        from_name: name,
-        subject: 'Contact Form Message',
-        message: "Email: " + email + "\n\n" + message,
-        "g-recaptcha-response": captchaToken
-    };
-    emailjs.send('service_j2mkwmy', 'template_zilck42', templateParams, 'OmkW-QBfWdiQpxshy').then(
-        (response) => {
-            alert("Message successfully sent!");
-        },
-        (error) => {
-            alert("There was an error in sending the message. Please contact support@georgescoding.com.");
-        },
-    );
+    
+    if (captchaToken == null) {
+        alert("Please complete the reCAPTCHA before sending your message!")
+    }
+    else {
+        var templateParams = {
+            to_name: 'George',
+            from_name: name,
+            subject: 'Contact Form Message',
+            message: "Email: " + email + "\n\n" + message,
+            "g-recaptcha-response": captchaToken
+        };
+        emailjs.send('service_j2mkwmy', 'template_zilck42', templateParams, 'OmkW-QBfWdiQpxshy').then(
+            (response) => {
+                alert("Message successfully sent!");
+            },
+            (error) => {
+                alert("There was an error in sending the message. Please contact support@georgescoding.com.");
+            },
+        );
+    }
 }
 
 
