@@ -21,6 +21,7 @@ function flip(x) {
 /* Gets the information inputted from the form and sends it using mail.js */
 function send(name, email, message) {
     var captchaToken = grecaptcha.getResponse();
+    alert(captchaToken);
 
     var templateParams = {
         to_name: 'George',
