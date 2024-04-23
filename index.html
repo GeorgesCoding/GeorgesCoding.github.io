@@ -7,17 +7,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://kit.fontawesome.com/6eb7aace7e.js" crossorigin="anonymous"></script>
-    <script src="functions.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
-    <script type="text/javascript">
-        (function () {
-            emailjs.init({
-                publicKey: "OmkW-QBfWdiQpxshy",
-            });
-        })();
-    </script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
         function onSubmit(token) {
             document.getElementById("form").submit();
@@ -35,10 +25,9 @@
 <div class="contact">
     <h3>Contact</h3>
     <div class="grid">
-
         <div class="form">
             <h4>Leave a Message</h4>
-            <form id="form">
+            <form id="form" action="?" method="POST">
                 <label for="name">Name:</label>
                 <input type="name" name="name" placeholder="Your Name" autocomplete="on" aria-required="true"><br>
 
@@ -48,7 +37,7 @@
                 <label for="message">Message:</label>
                 <textarea name="message" placeholder="Your Message" rows="5" aria-required="true"></textarea>
             </form>
-            <button class="g-recaptcha" data-sitekey="6Le5vcQpAAAAAPRCGYRuxFxoLzmvArO6QtPSUOe7" data-callback='onSubmit' data-action='submit' type="submit">Send</button>
+            <button class="g-recaptcha" data-sitekey="6Le5vcQpAAAAAPRCGYRuxFxoLzmvArO6QtPSUOe7" data-callback='onSubmit'>Send</button>
         </div>
 
     </div>
