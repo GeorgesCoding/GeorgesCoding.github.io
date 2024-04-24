@@ -153,7 +153,7 @@ a:focus {
 body {
     background-color: rgb(23, 39, 45);
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
-        url("file:///C:/Users/cheng/Downloads/Coding/Portfolio/Assets/Background.gif");
+        url("/Assets/Background.gif");
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
