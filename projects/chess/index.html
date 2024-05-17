@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="/assets/icon.ico">
+    <link rel="stylesheet" href="/src/style.css">
+    <script src="/functions.js"></script>
+    <script src="change.js"></script>
+    <title>Projects: Chess</title>
+    <script src="https://kit.fontawesome.com/6eb7aace7e.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#content").load("/src/template.html");
+        });
+    </script>
+</head>
+<a id="top"></a>
+
+<div id="content"></div>
+
+<script> /* name, tools, GitHub, media */
+    text = "A traditional chess game developed in Python using only the PyGame module, utilizing piece-square tables found in the Chess Programming Wiki."
+        + "Includes two-player mode and an AI bot using a minimax algorithm with alpha-beta pruning. Incorporates a dialogue window to announce moves,"
+        + "game state and castles or checks. Also created a separate packaging module with file manipulation to help optimize the process of packaging"
+        + " the files into an executable using PyInstaller. The board is represented through a 2D array with pieces and spaces being numbers. For a"
+        + " more in-depth explanation of each component of the game, please visit the GitHub repository of the project.";
+    const param = ['Chess', 'Python, PyGame, MiniMax', "https://github.com/GeorgesCoding/Chess", text, "/assets/Chess.exe", "/assets/chess-demo.mp4"];
+</script>
+
+<body onload="change(param)"></body>
+
+</html>

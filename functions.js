@@ -18,14 +18,6 @@ function flip(x) {
 }
 
 
-function load() {
-    var template = document.getElementById("projectTemplate");
-    var content = template.content;
-    var clone = content.cloneNode(true);
-    document.body.appendChild(clone);
-}
-
-
 /* Sends form to email via EmailJS, resets form and reCAPTCHA */
 function send(name, email, message) {
     var templateParams = {
@@ -76,4 +68,47 @@ function valid() {
         alert("Please complete the reCAPTCHA before sending your message!")
     }
     else { send(name, email, message); }
+}
+
+
+/* Adds text and media into the template html file */
+function change(param) {
+    document.getElementById("projectName").innerHTML = param[0];
+    document.getElementById("tools").innerHTML += param[1];
+    document.getElementById("github").href = param[2];
+    document.getElementById("github").style.fontSize = "50px";
+    document.getElementById("text").innerHTML = param[3];
+
+    var video = document.getElementById('video');
+    var click = document.getElementById("clickable");
+    var picture = document.getElementById("projectPic");
+
+    if (param[4] == 1) {
+        click.remove();
+    }
+    else if (param[4] == 2) {
+        document.getElementById("button").innerHTML = "Click Me!";
+        click.setAttribute("href", "coming-soon");
+    }
+    else {
+        click.setAttribute("href", param[4]);
+    }
+
+    if (param[5] == 1) {
+        video.remove();
+    }
+    else if (param[5] == 2) {
+        video.remove();
+        const projectPic = document.createElement('img');
+        projectPic.setAttribute('class', "picture");
+        projectPic.setAttribute('src', param[6]);
+        picture.appendChild(projectPic);
+    }
+    else {
+        var source = document.createElement('source');
+        source.setAttribute('src', param[5]);
+        source.setAttribute('type', 'video/mp4');
+        video.appendChild(source);
+        video.play();
+    }
 }

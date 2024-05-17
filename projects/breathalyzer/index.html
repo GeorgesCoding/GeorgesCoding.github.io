@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="/assets/icon.ico">
+    <link rel="stylesheet" href="/src/style.css">
+    <script src="/functions.js"></script>
+    <script src="change.js"></script>
+    <title>Projects: Breathalyzer</title>
+    <script src="https://kit.fontawesome.com/6eb7aace7e.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#content").load("/src/template.html");
+        });
+    </script>
+</head>
+<a id="top"></a>
+
+<div id="content"></div>
+
+<script> /* name, tools, GitHub, media */
+    text = "After acquiring some engineering design skills and knowledge, I decided to test this by making a breathalyzer along with a friend."
+        + "It tackled a real-world problem of drunk driving that was extremely prevalent, especially in America. Our project revolved around an MQ3"
+        + " alcohol sensor that would interface with an STM32 board, displaying the result on an LCD screen. The first problem was reading the data"
+        + " from the sensor and interpreting it so it could be read as a blood alcohol percentage. Through much research on the sensor itself and"
+        + " converting it to %BAC, we discovered an algorithm that works to our needs. However, another fact we learned about the sensor was its"
+        + " unreliability and inaccuracy. So to help alleviate this flaw, I implemented a calibration system. It takes real-time data on the"
+        + " surrounding air, using this in the computation for %BAC rather than a guessed constant. This helps with accuracy in various environments"
+        + " and creates a more reliable response.";
+        pictures = ["breath-circuit.png", "breath-diagram.png", "breath-log.png", "breath-model.png", "breath-slope.png"]
+    const param = ['Breathalyzer', 'C/C++, Arduino, STM32, AutoCAD', "https://github.com/GeorgesCoding/Breathalyzer", text, 1, 2, "/assets/Breathlyzer.JPG", pictures];
+</script>
+
+<body onload="change(param)"></body>
+
+</html>

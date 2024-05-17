@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="/assets/icon.ico">
+    <link rel="stylesheet" href="/src/style.css">
+    <script src="/functions.js"></script>
+    <script src="change.js"></script>
+    <title>Projects: Minesweeper</title>
+    <script src="https://kit.fontawesome.com/6eb7aace7e.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#content").load("/src/template.html");
+        });
+    </script>
+</head>
+<a id="top"></a>
+
+<div id="content"></div>
+
+<script> /* name, tools, GitHub, media */
+    text = "The retro game Minesweeper is built using C++ and played on your terminal. Each action (mark, reveal) uses bitwise operations to"
+        + " change the state of the board. An instance of the board is dynamically allocated and deleted from memory once the game is over. To start"
+        + " the game, double-click the Minesweeper.exe and your machine should automatically begin a terminal with the game initialized and ready to play."
+        + " This project was the first challenging C++ project we were given in our engineering programming course but despite the difficulty being"
+        + " substantially higher than the previous assignments, the end result was very satisfying to see. Below is a download button for the game that will"
+        + " enable you to play in your computer's terminal ";
+    const param = ['Minesweeper', 'C++', "https://github.com/GeorgesCoding/Minesweeper", text, "/assets/Minesweeper.exe", "/assets/minesweeper-demo.mp4"];
+</script>
+
+<body onload="change(param)"></body>
+
+</html>

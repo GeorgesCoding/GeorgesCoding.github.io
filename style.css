@@ -394,21 +394,26 @@ html {
 
 .back a {
     overflow: visible;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
+    padding-top: 30px;
+    transition: all 0.3s ease-in-out;
 }
 
-.projects .seeMore {
+.projects button {
     background-color: rgb(62, 105, 121);
     transition: all 0.3s ease-in-out;
-    font-size: 40px;
     color: white;
     border: none;
-    padding: 15px 32px;
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
-    box-shadow: 10px 5px 0px rgb(211, 211, 211);
     animation-fill-mode: both;
+}
+
+.projects .seeMore {
+    font-size: 40px;
+    padding: 15px 32px;
+    box-shadow: 10px 5px 0px rgb(211, 211, 211);
     margin-top: 40px;
 }
 
@@ -418,16 +423,27 @@ html {
     position: relative;
 }
 
+.projects .card a button {
+    font-size: 15px;
+    border-radius: 25px;
+    padding: 7px 17px 7px 17px;
+}
+
+.projects .info a:hover,
+.info a button:hover {
+    transform: translateY(2px);
+    box-shadow: none;
+    position: relative;
+}
+
 
 /* Contact and Socials*/
 .contact {
     margin-top: 230px;
-    height: 100%;
     z-index: -1;
     text-align: left;
     padding-left: 10%;
     margin-right: 10%;
-    margin-bottom: 10%;
 }
 
 .contact h3 {
@@ -509,7 +525,7 @@ textarea {
     padding-left: 5px;
 }
 
-.form button {
+.contact .grid button {
     background-color: rgb(62, 105, 121);
     transition: all 0.3s ease-in-out;
     font-size: 40px;
@@ -525,7 +541,7 @@ textarea {
     margin-left: 50px;
 }
 
-.form button:hover {
+.grid button:hover {
     transform: translateY(2px);
     box-shadow: none;
     position: relative;
@@ -568,6 +584,7 @@ a:focus {
 
 .socials .icons {
     text-align: center;
+    padding-bottom: 20%;
 }
 
 .socials {
@@ -578,13 +595,31 @@ a:focus {
     height: 22%;
 }
 
+.resume {
+    background-color: rgb(62, 105, 121);
+    overflow-y: hidden;
+    height: 110%;
+    border-radius: 25px;
+}
+
+.center button {
+    background-color: rgb(23, 39, 45);
+}
+
+.center {
+    margin-top: 20px;
+    display: flex;
+    overflow: visible;
+    justify-content: center
+}
+
 
 /* Copyright */
 .copyright {
     padding-bottom: 20px;
     font-size: 20px;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 50px;
 }
 
 
@@ -592,7 +627,7 @@ a:focus {
 body {
     background-color: rgb(23, 39, 45);
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
-        url("Assets/Background.gif");
+        url("assets/background.gif");
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;

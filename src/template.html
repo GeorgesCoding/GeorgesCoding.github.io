@@ -1,50 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="/Assets/Icon.ico">
-    <link rel="stylesheet" href="style.css">
-    <script src="/functions.js"></script>
-    <title id="projectName">Projects: </title>
-</head>
-<a id="top"></a>
-
-<body>
-    <!--Navigation Bar-->
-    <div id="navbar">
-        <a class="logo" href="#top"> <img src=/Assets/Icon.ico>GeorgesCoding</a>
-        <div class="right-header">
-            <div class="dropdown"> <a href="/projects/index.html">Projects</a>
-                <div class="content">
-                    <a href="/projects/chess/index.html">1. Chess App</a>
-                    <a href="/projects/portfolio/index.html">2. Portfolio Website</a>
-                    <a href="/projects/breathalyzer/index.html">3. Breathalyzer</a>
-                    <a href="/projects/blackjack/index.html">4. Blackjack</a>
-                    <a href="/projects/ph-sensor/index.html">5. pH-Sensor</a>
-                    <a href="/projects/minesweeper/index.html">6. Minesweeper</a>
-                    <a id="see-all" href="/projects/index.html">See All</a>
-                </div>
+<!--Navigation Bar-->
+<div id="navbar">
+    <a class="logo" href="#top"> <img src=/assets/icon.ico>GeorgesCoding</a>
+    <div class="right-header">
+        <div class="dropdown"> <a href="/projects/index.html">Projects</a>
+            <div class="content">
+                <a href="/projects/chess/index.html">1. Chess App</a>
+                <a href="/projects/portfolio/index.html">2. Portfolio Website</a>
+                <a href="/projects/breathalyzer/index.html">3. Breathalyzer</a>
+                <a href="/projects/blackjack/index.html">4. Blackjack</a>
+                <a href="/projects/ph-sensor/index.html">5. pH-Sensor</a>
+                <a href="/projects/minesweeper/index.html">6. Minesweeper</a>
+                <a id="see-all" href="/projects/index.html">See All</a>
             </div>
-            <a href="/projects/index.html">Back</a>
-            <a href="/index.html">Home</a>
         </div>
+        <a href="/projects/index.html">Back</a>
+        <a href="/index.html" class="fa-solid fa-house"></a>
     </div>
+</div>
 
 
-    <!-- Project Details -->
-    <div class="project">
-        <h3 id="projectName"></h3>
-    </div>
+<!-- Project Details -->
+<div class="project">
+    <h3 id="projectName"></h3>
+    <h4 id="tools">Languages/Tools: </h4>
+    <h4>GitHub: <a id="github" href="" target="_blank" class="fa fa-github"></a></h4>
+    <div id="projectPic" class="center"><video id="video" autoplay loop controls></video></div>
+    <p id="text"></p>
+    <div class="center"><a id="clickable" href="" target="_blank"><button id="button">Download</button></a></div>
+    <div class="center"></div>
+</div>
 
 
-    <!--Copyright-->
-    <div class="copyright">
-        <p>Copyright ©
-            <script>document.write(new Date().getFullYear());</script> George Chen
-        </p>
-    </div>
-</body>
-
-</html>
+<!--Copyright-->
+<div class="copyright">
+    <p>Copyright © 2024 George Chen</p>
+</div>

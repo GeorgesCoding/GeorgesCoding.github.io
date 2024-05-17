@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="/assets/icon.ico">
+    <link rel="stylesheet" href="/src/style.css">
+    <script src="/functions.js"></script>
+    <script src="change.js"></script>
+    <title>Projects: Calculator App</title>
+    <script src="https://kit.fontawesome.com/6eb7aace7e.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#content").load("/src/template.html");
+        });
+    </script>
+</head>
+<a id="top"></a>
+
+<div id="content"></div>
+
+<script> /* name, tools, GitHub, text, download, video */
+    text = "At Plan Group, the first project I was assigned to was Project ALICE, a software development program to help create various tools"
+        + " to optimize CAD design for designers in the engineering and CAD teams. Since the entire project used C#, a completely new programming"
+        + " language for me, I utilized my free time during the first couple weeks of onboarding to familiarize myself with the syntax through a"
+        + " simple coding project; a calculator app. I gained knowledge in initializing objects, encapsulation of functions, built-in methods and"
+        + " how to use the ASP.NET Web Forms interface with Visual Studio Community. Overall this mini-project helped me learn the basics of C#"
+        + " programming and gave me a head start in project ALICE. Below is a button to download the app.";
+    const param = ['Calculator', 'C#, ASP.NET Core', "https://github.com/GeorgesCoding/Calculator", text, "/assets/Calculator App.appref-ms", "/assets/calculator-demo.mp4"];
+</script>
+
+<body onload="change(param)"></body>
+
+</html>

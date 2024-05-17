@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="/assets/icon.ico">
+    <link rel="stylesheet" href="/src/style.css">
+    <script src="/functions.js"></script>
+    <script src="change.js"></script>
+    <title>Projects: pH-Sensor</title>
+    <script src="https://kit.fontawesome.com/6eb7aace7e.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#content").load("/src/template.html");
+        });
+    </script>
+</head>
+<a id="top"></a>
+
+<div id="content"></div>
+
+<script> /* name, tools, GitHub, media */
+    text = "The first hardware project I created, was built using an STM32 board, IC2 LCD screen and an Arduino-compatible probe pH-Sensor."
+        + " The topic behind this project was “create something that will aid with the reduction of climate change”, so me and my partner first thought"
+        + "of oceanic pollution and decay. We researched many reasons for this phenomenon and found that the main source was pollution, with the major"
+        + " sign being a significant change in pH within the water. Originally, we were planning to make a rover that would be able to drive around using"
+        + " a remote control with a camera for long-distance activity, collect the sample and bring it back to researchers. However, creating an actual"
+        + " functioning rover was practically impossible without any hardware or mechanical design knowledge. So we opted for a simpler solution, a buoy."
+        + " With it being built extremely cheaply, multiple can be distributed simultaneously to gather more accurate information. In the design we included"
+        + " a wifi module to send data over long distances, however, we were unable to implement this due to timing restraints. Below are some CAD drawings"
+        + " of our system along with the real-life implementation.";
+    pictures = "sensor-reallife.png", "sensor-newcad.png", "sensor-oldcad.png";
+    const param = ['pH-Sensor', 'C/C++, Arduino, STM32, AutoCAD', "https://github.com/GeorgesCoding/pH-Sensor", text, 1, 2, "/assets/projects-sensor.jpg", pictures];
+</script>
+
+<body onload="change(param)"></body>
+
+</html>

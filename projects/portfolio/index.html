@@ -2,14 +2,41 @@
 <html>
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="/assets/icon.ico">
+    <link rel="stylesheet" href="/src/style.css">
+    <script src="/functions.js"></script>
+    <script src="change.js"></script>
+    <script src="https://kit.fontawesome.com/6eb7aace7e.js" crossorigin="anonymous"></script>
+    <title>Projects: Portfolio Website</title>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
-            $("#div1").load("/src/template.html");
+            $("#content").load("/src/template.html");
         });
     </script>
 </head>
+<a id="top"></a>
 
-<div id="div1"></div>
+<div id="content"></div>
+
+<script>
+    text = "Inspired by my friend and the desire to learn more about a new type of programming,"
+        + " decided to make a portfolio website. At first, I did a simple coming soon page with a"
+        + " countdown made using JavaScript and a simple ellipsis animation to make the page come to life. The original static"
+        + " a website was complete within 10 days, including my introduction, work experience and all my projects listed. However, "
+        + "I felt that this current website felt lacking, especially after I took a look at more advanced websites and realized that there"
+        + " was no threshold to how simple or complicated my website could be, it was entirely up to me. So I began with animating my name"
+        + "using a typewriter animation in JavaScript, paying homage to my hobby of speed typing and mechanical keyboards. After, I created a"
+        + "simple but functional button, moving on hover. Lastly, I decided to use a card layout to display my projects. However, because I still"
+        + " wanted to include a small explanation of the project in the card, but wasn’t enough room. So I thought of making the card flip on click,"
+        + "with the backside being the short description and links to the GitHub page and individual project page with more details. "
+        + "Below, I have included the coming soon page for my website that was used as a placeholder while I created the actual website.";
+    const param = ['Portfolio Website', 'HTML, CSS, JavaScript, jQuery', "https://github.com/GeorgesCoding/Portfolio", text, 2, 1];
+</script>
+
+<body onload="change(param)"></body>
 
 </html>
