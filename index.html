@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- When deploying to domain, change the directories for the main and subpage in index.html -->
-
 
 <head>
     <meta charset="utf-8">
@@ -18,7 +16,7 @@
             });
         })();
     </script>
-    <link rel="icon" type="image/x-icon" href="Assets/icon.ico">
+    <link rel="icon" type="image/x-icon" href="assets/icon.ico">
     <link rel="stylesheet" href="style.css">
     <title>George's Portfolio Website</title>
 </head>
@@ -27,19 +25,19 @@
 
 <!--Navigation Bar-->
 <div id="navbar">
-    <a class="logo" href="#top"> <img src=Assets/icon.ico>GeorgesCoding</a>
+    <a class="logo" href="#top"> <img src=assets/icon.ico>GeorgesCoding</a>
     <div class="right-header">
         <a href="#about">About</a>
         <a href="#work">Work</a>
         <div class="dropdown"> <a href="#projects">Projects</a>
             <div class="content">
-                <a href="projects/chess/index.html">1. Chess App</a>
-                <a href="projects/portfolio/index.html">2. Portfolio Website</a>
-                <a href="projects/breathalyzer/index.html">3. Breathalyzer</a>
-                <a href="projects/blackjack/index.html">4. Blackjack</a>
-                <a href="projects/ph-sensor/index.html">5. pH-Sensor</a>
-                <a href="projects/minesweeper/index.html">6. Minesweeper</a>
-                <a id="see-all" href="projects/index.html">See All</a>
+                <a href="/projects/chess">1. Chess App</a>
+                <a href="/projects/portfolio">2. Portfolio Website</a>
+                <a href="/projects/breathalyzer">3. Breathalyzer</a>
+                <a href="/projects/blackjack">4. Blackjack</a>
+                <a href="/projects/ph-sensor">5. pH-Sensor</a>
+                <a href="/projects/minesweeper">6. Minesweeper</a>
+                <a id="see-all" href="/projects">See All</a>
             </div>
         </div>
         <a href="#contact">Contact</a>
@@ -73,7 +71,7 @@
             development. Some personal interests that are non-technology related are dragon & lion dance,
             playing piano, mechanical keyboards and camping, most of which I've been doing for over 10 years.
         </p>
-        <div id="profile-image"> <img src='Assets/overview-picture.png'></div>
+        <div id="profile-image"> <img src='/assets/overview-picture.png'></div>
     </div>
 </div>
 <a id="work"></a>
@@ -92,8 +90,8 @@
         Revit for TD Bank electrical floor plan layouts and helped fix faulty conduit placements.
     </p>
     <div class="plangroup">
-        <img id="ALICE" src='Assets/work-alice.png'>
-        <img id="selfie" src='Assets/work-selfie.jpg'>
+        <img id="ALICE" src='/assets/work-alice.png'>
+        <img id="selfie" src='/assets/work-selfie.jpg'>
     </div>
 </div>
 
@@ -105,73 +103,73 @@
     <div class="grid">
 
         <div class="card" onclick="flip(this)" id="1">
-            <div class="front"><img src='Assets/projects-chess.png'>Chess App</div>
+            <div class="front"><img src='/assets/projects-chess.png'>Chess App</div>
             <div class="back">A traditional game of chess with an AI engine using a minimax algorithm with alpha-beta pruning.
                 Developed with the PyGame module and packaged into an executable for accessibility.
                 <div class="info"><a href="https://github.com/GeorgesCoding/Chess" target="_blank" class="fa fa-github"></a>
-                    <a href="projects/chess/index.html"><button class="learnMore">Learn More</button></a>
+                    <a href="/projects/chess"><button class="learnMore">Learn More</button></a>
                     <br>Python
                 </div>
             </div>
         </div>
 
         <div class="card" onclick="flip(this)" id="2">
-            <div class="front"><img src='Assets/projects-portfolio.png'>Portfolio Website</div>
+            <div class="front"><img src='/assets/projects-portfolio.png'>Portfolio Website</div>
             <div class="back">Custom-built portfolio website to showcase engineering and software development projects and work experience.
                 Animations programmed with pure JS and CSS.
                 <div class="info"><a href="https://github.com/GeorgesCoding/Portfolio" target="_blank" class="fa fa-github"></a>
-                    <a href="projects/portfolio/index.html"><button class="learnMore">Learn More</button></a>
+                    <a href="/projects/portfolio"><button class="learnMore">Learn More</button></a>
                     <br>HTML, CSS, JavaScript
                 </div>
             </div>
         </div>
 
         <div class="card" onclick="flip(this)" id="3">
-            <div class="front"><img src='Assets/projects-breathalyzer.jpg'>Breathalyzer</div>
+            <div class="front"><img src='/assets/projects-breathalyzer.jpg'>Breathalyzer</div>
             <div class="back">An alcohol detection device capable of reading an approximate %BAC in the surrounding air.
                 Created using an STM32 board and MQ3 alcohol sensor, programmed with the ArduinoIDE.
                 <div class="info"><a href="https://github.com/GeorgesCoding/Breathalyzer" target="_blank" class="fa fa-github"></a>
-                    <a href="projects/breathalyzer/index.html"><button class="learnMore">Learn More</button></a>
+                    <a href="/projects/breathalyzer/index.html"><button class="learnMore">Learn More</button></a>
                     <br>C/C++, Arduino, STM32, AutoCAD
                 </div>
             </div>
         </div>
 
         <div class="card" onclick="flip(this)" id="4">
-            <div class="front"><img src='Assets/projects-blackjack.png'>Blackjack</div>
+            <div class="front"><img src='/assets/projects-blackjack.png'>Blackjack</div>
             <div class="back">Casino-style blackjack game built using Java and Java Swing.
                 Includes a computer that will determine moves based on classic casino rules.
                 <div class="info"><a href="https://github.com/GeorgesCoding/Blackjack" target="_blank" class="fa fa-github"></a>
-                    <a href="projects/blackjack/index.html"><button class="learnMore">Learn More</button></a>
+                    <a href="/projects/blackjack/index.html"><button class="learnMore">Learn More</button></a>
                     <br>Java
                 </div>
             </div>
         </div>
 
         <div class="card" onclick="flip(this)" id="5">
-            <div class="front"><img src='Assets/projects-sensor.jpg'>pH-Sensor</div>
+            <div class="front"><img src='/assets/projects-sensor.jpg'>pH-Sensor</div>
             <div class="back">A sensory tool capable of determining the approximate pH of any liquid.
                 Built an STM32 board and an analog electrode pH sensor compatible with Arduino.
                 <div class="info"><a href="https://github.com/GeorgesCoding/pH-Sensor" target="_blank" class="fa fa-github"></a>
-                    <a href="projects/ph-sensor/index.html"><button class="learnMore">Learn More</button></a>
+                    <a href="/projects/ph-sensor"><button class="learnMore">Learn More</button></a>
                     <br>C/C++, Arduino, STM32, AutoCAD
                 </div>
             </div>
         </div>
 
         <div class="card" onclick="flip(this)" id="6">
-            <div class="front"><img src='Assets/projects-minesweeper.png'>Minesweeper</div>
+            <div class="front"><img src='/assets/projects-minesweeper.png'>Minesweeper</div>
             <div class="back">Command terminal adaptation of the retro game Minesweeper.
                 <div class="info">
                     <a href="https://github.com/GeorgesCoding/Minesweeper" target="_blank" class="fa fa-github"></a>
-                    <a href="projects/minesweeper/index.html"><button class="learnMore">Learn More</button></a>
+                    <a href="/projects/minesweeper"><button class="learnMore">Learn More</button></a>
                     <br>C++
                 </div>
             </div>
         </div>
 
     </div>
-    <a href="projects/index.html"><button class="seeMore">See All</button></a>
+    <a href="/projects"><button class="seeMore">See All</button></a>
 </div>
 
 
@@ -211,7 +209,7 @@
 
         <div class="resume">
             <h4>Download My Resume</h4>
-            <div class="center"><a href="assets/resume.pdf" target="_blank"><button>Click Me!</button></a></div>
+            <div class="center"><a href="/assets/resume.pdf" target="_blank"><button>Click Me!</button></a></div>
         </div>
     </div>
 
