@@ -203,6 +203,9 @@ a:focus {
     font-size: 28px;
 }
 
+button {
+    border-radius: 25px;
+}
 
 /* Copyright */
 .copyright p {

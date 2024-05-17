@@ -209,6 +209,9 @@ a button {
     position: relative;
 }
 
+button {
+    border-radius: 25px;
+}
 
 
 /* Copyright */

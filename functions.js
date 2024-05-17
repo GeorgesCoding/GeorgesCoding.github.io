@@ -1,3 +1,5 @@
+window.history.pushState('', '', location.pathname.slice(0, -1));
+
 /* Creates a typewriter effect by adding text one character at a time, skips over spaces for a smoother animation */
 var text = "  Hi, I'm George";
 i = 0;
