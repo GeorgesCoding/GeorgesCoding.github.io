@@ -1,3 +1,5 @@
+window.history.pushState('', '', location.pathname.slice(0, -1));
+
 var dueDate = new Date("Apr 17, 2024 15:00:00").getTime();
 
 var x = setInterval(function () {
