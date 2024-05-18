@@ -90,7 +90,7 @@ function change(param) {
     }
     else if (param[4] == 2) {
         document.getElementById("button").innerHTML = "Click Me!";
-        click.setAttribute("href", "coming-soon");
+        click.setAttribute("href", "portfolio/coming-soon");
     }
     else {
         click.setAttribute("href", param[4]);
