@@ -187,12 +187,32 @@ video {
     border-radius: 25px;
 }
 
-
 .picture {
     border-radius: 25px;
     margin-top: 32px;
     border: rgb(62, 105, 121) 10px solid;
 }
+
+.otherPicture {
+    width: 90%;
+    border-radius: 25px;
+    margin-top: 32px;
+    border: rgb(62, 105, 121) 10px solid;
+}
+
+.pictureGrid1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+}
+
+
+.pictureGrid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+}
+
 
 /* Links */
 a:link,
@@ -208,12 +228,12 @@ button {
 }
 
 /* Copyright */
-.copyright p {
-    padding-top: 50px;
-    padding-bottom: 20px;
+.copyright {
+    padding-bottom: 10px;
     font-size: 20px;
     text-align: center;
-    vertical-align: bottom;
+    margin-top: 50px;
+    width: 100%;
 }
 
 

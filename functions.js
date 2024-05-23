@@ -84,6 +84,8 @@ function change(param) {
     var video = document.getElementById('video');
     var click = document.getElementById("clickable");
     var picture = document.getElementById("projectPic");
+    var otherPics = document.getElementById("otherPics");
+
 
     if (param[4] == 1) {
         click.remove();
@@ -113,4 +115,53 @@ function change(param) {
         video.appendChild(source);
         video.play();
     }
+
+
+    if (param[7] == 1) {
+        otherPics.remove();
+    }
+    else if (param[7] == 2) {
+        otherPics.setAttribute("class", "pictureGrid1");
+
+        const otherPic1 = document.createElement("img");
+        const otherPic2 = document.createElement("img");
+        const otherPic3 = document.createElement("img");
+
+        otherPic1.setAttribute("class", "otherPicture");
+        otherPic1.setAttribute("src", param[8][0]);
+        otherPic2.setAttribute("class", "otherPicture");
+        otherPic2.setAttribute("src", param[8][1]);
+        otherPic3.setAttribute("class", "otherPicture");
+        otherPic3.setAttribute("src", param[8][2]);
+
+        otherPics.appendChild(otherPic1);
+        otherPics.appendChild(otherPic2);
+        otherPics.appendChild(otherPic3);
+    }
+    else {
+        otherPics.setAttribute("class", "pictureGrid2");
+        const otherPic1 = document.createElement("img");
+        const otherPic2 = document.createElement("img");
+        const otherPic3 = document.createElement("img");
+        const otherPic4 = document.createElement("img");
+        const otherPic5 = document.createElement("img");
+
+        otherPic1.setAttribute("class", "otherPicture");
+        otherPic1.setAttribute("src", param[8][0]);
+        otherPic2.setAttribute("class", "otherPicture");
+        otherPic2.setAttribute("src", param[8][1]);
+        otherPic3.setAttribute("class", "otherPicture");
+        otherPic3.setAttribute("src", param[8][2]);
+        otherPic4.setAttribute("class", "otherPicture");
+        otherPic4.setAttribute("src", param[8][3]);
+        otherPic5.setAttribute("class", "otherPicture");
+        otherPic5.setAttribute("src", param[8][4]);
+
+        otherPics.appendChild(otherPic1);
+        otherPics.appendChild(otherPic2);
+        otherPics.appendChild(otherPic3);
+        otherPics.appendChild(otherPic4);
+        otherPics.appendChild(otherPic5);
+    }
+
 }
