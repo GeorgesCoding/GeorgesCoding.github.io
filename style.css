@@ -562,7 +562,7 @@ a:focus {
     font-size: 60px;
     transition: all 0.3s linear;
     height: 32px;
-    margin-top: 40px;
+    margin-top: 25px;
     align-content: center;
     margin-right: 20px;
 }
@@ -591,7 +591,6 @@ a:focus {
 }
 
 .grid .center button {
-    margin: 0;
     margin: 0px 0px 32px;
     background-color: rgb(23, 39, 45);
     border-radius: 25px;
@@ -599,7 +598,6 @@ a:focus {
 
 
 .center {
-    margin-top: 20px;
     display: flex;
     overflow: visible;
     justify-content: center
