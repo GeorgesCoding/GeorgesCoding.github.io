@@ -209,6 +209,7 @@ function videoAction(x) {
                 fullscreen();
                 break;
             case "r":
+                console.log("r");
                 refresh();
                 break;
             case "l":
