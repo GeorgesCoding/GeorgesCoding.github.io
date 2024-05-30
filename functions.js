@@ -199,6 +199,9 @@ function play() {
 }
 
 function videoAction(x) {
+
+    console.log(x)
+    
     var video = document.getElementById("video");
     if (video != null) {
         switch (x) {
@@ -209,7 +212,6 @@ function videoAction(x) {
                 fullscreen();
                 break;
             case "r":
-                console.log("r");
                 refresh();
                 break;
             case "l":
