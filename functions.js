@@ -208,9 +208,6 @@ function videoAction(x) {
             case "f":
                 fullscreen();
                 break;
-            case "r":
-                refresh();
-                break;
             case "l":
             case "ArrowRight":
                 forward();
