@@ -1,5 +1,8 @@
 window.history.pushState('', '', location.pathname.slice(0, -1));
 
+window.addEventListener("keydown", (e) => videoAction(e.key));
+
+
 /* Creates a typewriter effect by adding text one character at a time, skips over spaces for a smoother animation */
 var text = "  Hi, I'm George";
 i = 0;
@@ -85,8 +88,13 @@ function change(param) {
     var click = document.getElementById("clickable");
     var picture = document.getElementById("projectPic");
     var otherPics = document.getElementById("otherPics");
+    var playpause = document.getElementById("playbutton");
+    var refresh = document.getElementById("refresh");
+    var fullscreen = document.getElementById("fullscreen");
+    var backward = document.getElementById("backward");
+    var forward = document.getElementById("forward");
 
-
+    /* adds link to coming soon page */
     if (param[4] == 1) {
         click.remove();
     }
@@ -98,11 +106,23 @@ function change(param) {
         click.setAttribute("href", param[4]);
     }
 
+    /* adds videos to projects where applicable */
     if (param[5] == 1) {
         video.remove();
+        playpause.remove();
+        refresh.remove();
+        fullscreen.remove();
+        backward.remove();
+        forward.remove();
     }
     else if (param[5] == 2) {
         video.remove();
+        playpause.remove();
+        refresh.remove();
+        fullscreen.remove();
+        backward.remove();
+        forward.remove();
+
         const projectPic = document.createElement('img');
         projectPic.setAttribute('class', "picture");
         projectPic.setAttribute('src', param[6]);
@@ -113,11 +133,10 @@ function change(param) {
         source.setAttribute('src', param[5]);
         source.setAttribute('type', 'video/mp4');
         video.appendChild(source);
-        video.play();
     }
 
-
-    if (param[7] == 1) {
+    /* adds extra pictures for hardware projects */
+    if (param[7] == 1 || param[7] == null) {
         otherPics.remove();
     }
     else if (param[7] == 2) {
@@ -163,5 +182,96 @@ function change(param) {
         otherPics.appendChild(otherPic4);
         otherPics.appendChild(otherPic5);
     }
+}
 
+function play() {
+    var video = document.getElementById('video');
+    var button = document.getElementById('play');
+
+    if (video.paused == true) {
+        video.play();
+        button.setAttribute("class", "fa-solid fa-pause")
+    }
+    else {
+        video.pause();
+        button.setAttribute("class", "fa-solid fa-play")
+    }
+}
+
+function videoAction(x) {
+    var video = document.getElementById("video");
+    if (video != null) {
+        switch (x) {
+            case "k":
+                play();
+                break;
+            case "f":
+                fullscreen();
+                break;
+            case "l":
+            case "ArrowRight":
+                forward();
+                break;
+            case "j":
+            case "ArrowLeft":
+                backward();
+                break;
+        }
+    }
+}
+
+function exitFull() {
+    console.log("here");
+
+}
+
+
+function refresh() {
+    var video = document.getElementById('video');
+    video.currentTime = 0;
+    video.pause();
+
+    var button = document.getElementById('play');
+    button.setAttribute("class", "fa-solid fa-play")
+}
+
+function fullscreen() {
+    var video = document.getElementById("video");
+
+    var isInFullScreen = (document.fullscreenElement && document.fullscreenElement !== null) ||
+        (document.webkitFullscreenElement && document.webkitFullscreenElement !== null) ||
+        (document.mozFullScreenElement && document.mozFullScreenElement !== null) ||
+        (document.msFullscreenElement && document.msFullscreenElement !== null);
+
+    if (!isInFullScreen) {
+        if (video.requestFullscreen) {
+            video.requestFullscreen();
+        } else if (video.mozRequestFullScreen) {
+            video.mozRequestFullScreen();
+        } else if (video.webkitRequestFullScreen) {
+            video.webkitRequestFullScreen();
+        } else if (video.msRequestFullscreen) {
+            video.msRequestFullscreen();
+        }
+    } else {
+        if (video.exitFullscreen) {
+            video.exitFullscreen();
+        } else if (video.webkitExitFullscreen) {
+            video.webkitExitFullscreen();
+        } else if (video.mozCancelFullScreen) {
+            video.mozCancelFullScreen();
+        } else if (video.msExitFullscreen) {
+            video.msExitFullscreen();
+        }
+    }
+}
+
+function backward() {
+    var video = document.getElementById('video');
+    video.currentTime -= 10;
+}
+
+function forward() {
+    var video = document.getElementById('video');
+    video.currentTime += 10;
 }

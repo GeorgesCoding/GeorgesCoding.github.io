@@ -24,7 +24,15 @@
     <h3 id="projectName"></h3>
     <h4 id="tools">Languages/Tools: </h4>
     <h4>GitHub: <a id="github" href="" target="_blank" class="fa fa-github"></a></h4>
-    <div id="projectPic" class="center"><video id="video" autoplay loop></video></div>
+    <div id="projectPic" class="center"><video id="video" loop onclick="videoAction('k')"></video></div>
+    <div class="center"></div>
+    <div class="center" id="playbutton">
+        <button onclick="backward()" id="backward" class="fa-solid fa-backward"></buton>
+            <button onclick="play()" id="play" class="fa-solid fa-play"></buton>
+                <button onclick="forward()" id="forward" class="fa-solid fa-forward"></buton>
+                    <button onclick="refresh()" id="refresh" class="fa-solid fa-refresh"></buton>
+                        <button onclick="fullscreen()" id="fullscreen" class="fa-solid fa-expand"></buton>
+    </div>
     <div id="otherPics"></div>
     <p id="text"></p>
     <div class="center"><a id="clickable" href="" target="_blank"><button id="button">Download</button></a></div>

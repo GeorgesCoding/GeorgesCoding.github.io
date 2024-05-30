@@ -161,7 +161,12 @@ html {
     justify-content: center
 }
 
-.center a button {
+.center a button,
+.center #play,
+.center #refresh,
+.center #fullscreen,
+.center #forward,
+.center #backward {
     background-color: rgb(62, 105, 121);
     transition: all 0.3s ease-in-out;
     font-size: 40px;
@@ -173,10 +178,33 @@ html {
     animation-fill-mode: both;
 }
 
+.center #play,
+.center #refresh,
+.center #fullscreen,
+.center #forward,
+.center #backward {
+    box-shadow: none;
+}
+
 a button:hover,
-.project a:hover {
+.project a:hover,
+#play:hover,
+.center #refresh:hover,
+.center #fullscreen:hover,
+.center #forward:hover,
+.center #backward:hover {
     transform: translateY(2px);
     box-shadow: none;
+}
+
+#play,
+#refresh,
+#fullscreen,
+#forward,
+#backward {
+    margin-top: 15px;
+    margin-bottom: 45px;
+    margin-right: 15px;
 }
 
 video {
@@ -184,6 +212,16 @@ video {
     width: auto;
     margin-top: 32px;
     border-radius: 25px;
+    border: rgb(23, 39, 45) 10px solid;
+    background-color: rgb(23, 39, 45);
+}
+
+video:hover {
+    cursor: pointer;
+}
+
+video::-webkit-media-controls {
+    display: none !important;
 }
 
 .picture {
@@ -222,7 +260,8 @@ a:focus {
     font-size: 28px;
 }
 
-button {
+button,
+#play {
     border: 2px rgb(32, 32, 32) solid;
     border-radius: 25px;
     transition: all 0.3s ease-in-out;

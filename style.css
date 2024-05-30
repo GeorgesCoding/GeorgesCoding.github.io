@@ -212,7 +212,6 @@ cursor width is 1/2 border width */
 #overview .box {
     display: flex;
     align-items: center;
-    margin-top: -20px;
 }
 
 #overview h3 {
@@ -594,6 +593,7 @@ a:focus {
     margin: 0px 0px 32px;
     background-color: rgb(23, 39, 45);
     border-radius: 25px;
+    border: 2px rgb(32, 32, 32) solid;
 }
 
 
