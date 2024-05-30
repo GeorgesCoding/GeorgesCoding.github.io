@@ -200,8 +200,8 @@ function play() {
 
 function videoAction(x) {
 
-    console.log(x)
-    
+    alert(x);
+
     var video = document.getElementById("video");
     if (video != null) {
         switch (x) {
