@@ -199,9 +199,6 @@ function play() {
 }
 
 function videoAction(x) {
-
-    alert(x);
-
     var video = document.getElementById("video");
     if (video != null) {
         switch (x) {
