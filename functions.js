@@ -76,7 +76,7 @@ function valid() {
 }
 
 
-/* Adds text and media into the template html file */
+/* adds text and media into the template html file */
 function change(param) {
     document.getElementById("projectName").innerHTML = param[0];
     document.getElementById("tools").innerHTML += param[1];
