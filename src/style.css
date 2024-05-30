@@ -117,7 +117,6 @@ html {
 
 /* Information */
 .project {
-    margin-top: 75px;
     height: fit-content;
     z-index: -1;
     overflow: visible;
@@ -285,6 +284,9 @@ button,
 
 /* Background Picture */
 body {
+    overflow-y: visible;
+    margin-top: 75px;
+    height: calc(100vh - 75px);
     background-color: rgb(23, 39, 45);
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
         url("/assets/background.gif");

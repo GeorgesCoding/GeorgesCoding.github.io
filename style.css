@@ -10,13 +10,35 @@
 
 body,
 html {
-    height: 100%;
+    height: 100vh;
     margin: 0;
     scroll-behavior: smooth;
     width: 100%;
     min-height: 100%;
     overflow-x: hidden;
 }
+
+html {
+    overflow-y: hidden;
+    height: auto;
+    position: absolute;
+}
+
+/* Background Picture */
+body {
+    overflow-y: visible;
+    margin-top: 75px;
+    height: calc(100vh - 75px);
+
+    background-color: rgb(23, 39, 45);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
+        url("assets/background.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 
 
 /* Navigation Bar */
@@ -125,7 +147,7 @@ html {
     width: max-content;
     overflow: hidden;
     font-size: 100px;
-    margin: 15% auto auto 10%;
+    margin: 10% auto auto 10%;
     white-space: nowrap;
 }
 
@@ -617,21 +639,9 @@ button {
 
 /* Copyright */
 .copyright {
-    padding-bottom: 10px;
+    margin-bottom: 10px;
     font-size: 20px;
     text-align: center;
     margin-top: 50px;
     width: 100%;
-}
-
-
-/* Background Picture */
-body {
-    background-color: rgb(23, 39, 45);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
-        url("assets/background.gif");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
 }
