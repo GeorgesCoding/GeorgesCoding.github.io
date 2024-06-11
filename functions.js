@@ -2,6 +2,11 @@ window.history.pushState('', '', location.pathname.slice(0, -1));
 
 window.addEventListener("keydown", (e) => videoAction(e.key));
 
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+}
+
+
+
 
 /* Creates a typewriter effect by adding text one character at a time, skips over spaces for a smoother animation */
 var text = "  Hi, I'm George";
@@ -186,7 +191,9 @@ function change(param) {
 
 function play() {
     var video = document.getElementById('video');
+    var pauseplay = document.getElementById('pauseplay');
     var button = document.getElementById('play');
+
 
     if (video.paused == true) {
         video.play();

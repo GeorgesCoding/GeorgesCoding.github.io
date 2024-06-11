@@ -8,6 +8,29 @@
 }
 
 
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(30, 52, 60);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(62, 105, 121);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgb(46, 79, 91);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-button{
+    background: darkgray;
+}
+
 body,
 html {
     height: 100vh;
@@ -223,12 +246,12 @@ cursor width is 1/2 border width */
 
 /* Overview */
 #overview {
-    margin-top: 75px;
     padding-left: 10%;
     width: 100%;
     z-index: -1;
     padding-right: 10%;
     height: 100%;
+    margin-bottom: 300px;
 }
 
 #overview .box {
@@ -261,11 +284,11 @@ cursor width is 1/2 border width */
 
 /* Work */
 .experience {
-    margin-top: 75px;
     width: 100%;
     height: 100%;
     text-align: right;
     overflow-y: visible;
+    margin-bottom: 300px;
 
 }
 
@@ -327,16 +350,16 @@ cursor width is 1/2 border width */
 .projects {
     margin-top: 75px;
     width: 100%;
-    height: 100%;
+    height: 110%;
     z-index: -1;
     overflow: visible;
     text-align: center;
-    margin-bottom: 10%;
+    margin-bottom: 300px;
 }
 
 .projects .grid {
     margin-top: 20px;
-    height: 80%;
+    height: 90%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
